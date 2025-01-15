@@ -23,7 +23,8 @@ class StackArr {
                 cout << "Stack overflow\n";
                 return;
             }
-            arr[++topIndex] = value;
+            topIndex += 1;
+            arr[topIndex] = value;
         }
 
         // Pop function to remove element from the stack
@@ -113,9 +114,12 @@ int main() {
     cout << "Stack size: " << s.size() << endl;  // Output: 2
 
     s.pop();
-    // s.push(30);
+    s.push(30);
     cout << "Top element after pop: " << s.top() << endl;  // Output: 10
     cout << "Stack size after pop: " << s.size() << endl;  // Output: 1
+    s.push(40);
+    // s.push(50);
+    // s.push(60);
 
     s.pop();
     cout << "Stack size after another pop: " << s.size() << endl;  // Output: 0

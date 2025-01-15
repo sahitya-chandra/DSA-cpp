@@ -25,7 +25,7 @@ Node* convertArr2LL(vector<int> &arr) {
 	for(int i = 1; i<arr.size(); i++) {
 		Node* temp = new Node(arr[i]);
 		mover->next = temp;
-		cout<<mover->next<<" "<<mover->data<<endl;
+		// cout<<mover->next<<" "<<mover->data<<endl;
 		mover = temp;
 		
 	}
@@ -38,7 +38,7 @@ void printLL(Node* head) {
 	Node* currentNode = head;
 
 	while(currentNode != NULL) {
-		cout<<currentNode->data<<endl;
+		// cout<<currentNode->data<<endl;
 		currentNode = currentNode->next;
 	}
 	cout<<endl;

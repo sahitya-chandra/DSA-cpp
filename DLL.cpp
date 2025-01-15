@@ -39,7 +39,7 @@ void printDLL(Node* head) {
 	Node* currentNode = head;
 
 	while(currentNode != NULL) {
-		cout<<currentNode->data<<endl;
+		// cout<<currentNode->data<<endl;
 		currentNode = currentNode->next;
 	}
 	cout<<endl;

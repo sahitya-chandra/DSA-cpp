@@ -25,7 +25,7 @@ public:
 	      	cout << "Queue is full\nExiting..." << endl;
 	    }
 
-	    if (rear == -1) {
+	    if (currSize == 0) {
 		    front = 0;
 		    rear = 0;
 	    } else {
@@ -39,7 +39,7 @@ public:
 
     // Pop function to remove element from the queue
     int pop() {
-        if (front == -1) {
+        if (currSize == 0) {
       		cout << "Queue Empty\nExiting..." << endl;
     	}
 
@@ -58,7 +58,7 @@ public:
 
     // Top function to get the front element of the queue
     int top() {
-        if (front == -1) {
+        if (currSize == 0) {
       		cout << "Queue is Empty" << endl;
     	}
     	return arr[front];
@@ -109,6 +109,7 @@ class QueueLL {
 	
 			} else {
 				end->next = temp;
+				cout<<end->data<<endl;
 			}
 
 			sizee += 1;
@@ -119,19 +120,15 @@ class QueueLL {
 			if (start == nullptr) {
 				cout<<"empty";
 			}
-			cout<<"olaoao"<<endl;
 
 			Node* temp = start;
-			cout<<start<<endl;
 			start = temp->next;
-			cout<<start<<endl;
 			delete temp;
 			sizee -= 1; 
 		}
 
 		int top() {
 			if (start == nullptr) return 0;
-			// cout<<"dhgfjfg"<<endl;
 			return start->data;
 		}
 
